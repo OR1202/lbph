@@ -19,7 +19,13 @@ LBPは注目画素とその近傍画素の大小比較によって特徴量が�
 
 $$
 	{\rm LBP}(x,y)=\sum_{p=0}^{\rm P-1}2^{p}{\rm T}\left({\rm V}(x_{p},y_{p})-{\rm V}(x,y)\right)\\
-	x_{p}=x+{\rm R}\cos(2{\pi}p/\rm P)\\
+$$
+
+$$
+	x_{p}=x+{\rm R}\cos(2{\pi}p/\rm P)
+$$
+
+$$
 	y_{p}=y-{\rm R}\sin(2{\pi}p/\rm P)
 $$
 
@@ -54,14 +60,18 @@ $\chi^2$距離とした．
 が$N$件存在した場合は，
 以下のように特徴量ベクトルの重心ベクトル$\boldsymbol{R}$を求め，
 それをテンプレートとする．
+
 $$
 \boldsymbol{R}=\frac{\sum_{n=1}^N\boldsymbol{R}_n}{N}
 $$
+
 この場合，$\boldsymbol{R}$と$\boldsymbol{Q}$の距離は式で求められる．
 ただし，$r_i+q_i=0$の時の局所距離は0とした．
+
 $$
 \chi^2(\boldsymbol{R},\boldsymbol{Q}) = \sum_{i} \frac{(r_i-q_i)^2}{r_i+q_i}
 $$
+
 $\chi^2$距離は1問題につき複数算出されるが，
 判定の際には問題の解答中に算出された距離を平均化し，
 平均距離に-1を乗じた値をその問題における顔類似度$s_{\rm F}$とする．
