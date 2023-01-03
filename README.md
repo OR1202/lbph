@@ -48,7 +48,6 @@ $\rm P = 8$，
 $\rm R = 1$，
 $\rm d = 8$
 とした．
-\sout{この場合，特徴ベクトルの次元は$\rm 3776$となる．}
 
 
 二つのLBPHの類似度は，
@@ -62,7 +61,7 @@ $\chi^2$距離とした．
 それをテンプレートとする．
 
 $$
-\boldsymbol{R}=\frac{\sum_{n=1}^N\boldsymbol{R}_n}{N}
+\boldsymbol{R}=\frac{1}{N}\sum_{n=1}^N\boldsymbol{R}_n
 $$
 
 この場合，$\boldsymbol{R}$と$\boldsymbol{Q}$の距離は式で求められる．
